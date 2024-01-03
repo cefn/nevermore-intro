@@ -1,0 +1,47 @@
+{
+  "name": "nevermore-intro",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Reference usage of nevermore",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "launch_comparisons": "tsx examples/launch-comparisons.ts",
+    "compile": "tsc --noEmit",
+    "001_single": "clear && tsx --max-old-space-size=24 examples/http/001_single.ts",
+    "002_multi": "clear && tsx --max-old-space-size=24 examples/http/002_multi.ts",
+    "003a_multi_scaleup": "clear && tsx --max-old-space-size=24 examples/http/003_multi_scaleup.ts",
+    "003b_multi_scaleup_heap": "clear && tsx --max-old-space-size=48 examples/http/003_multi_scaleup.ts",
+    "004_multi_scaleup_loop": "clear && tsx --max-old-space-size=24 examples/http/004_multi_scaleup_loop.ts",
+    "005_multi_w_limit": "clear && tsx --max-old-space-size=24 examples/http/005_multi_w_limit.ts",
+    "006_multi_w_limit_scaleup": "clear && tsx --max-old-space-size=24 examples/http/006_multi_w_limit_scaleup.ts",
+    "007_multi_op_generate_jobs": "clear && tsx --max-old-space-size=24 examples/http/007_multi_op_generate_jobs.ts",
+    "008_impose_quota": "clear && tsx --max-old-space-size=24 examples/http/008_impose_quota.ts",
+    "009_handle_quota": "clear && tsx --max-old-space-size=24 examples/http/009_handle_quota.ts",
+    "010_job_metadata": "clear && tsx --max-old-space-size=24 examples/http/010_job_metadata.ts",
+    "011_further_options": "clear && tsx --max-old-space-size=24 examples/http/011_further_options.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cefn/nevermore-intro.git"
+  },
+  "author": "Cefn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cefn/nevermore-intro/issues"
+  },
+  "homepage": "https://github.com/cefn/nevermore-intro#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "zx": "^7.2.3"
+  },
+  "dependencies": {
+    "@watchable/nevermore": "^0.9.0-alpha.9",
+    "axios": "^1.6.3",
+    "express": "^4.18.2",
+    "tsx": "^4.7.0"
+  }
+}
